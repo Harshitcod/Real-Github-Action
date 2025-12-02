@@ -1,0 +1,17 @@
+
+name: Multi-Event pipeline / workflow
+
+on:
+  push:
+    branches:
+      - master
+      - test
+      - test1
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Running on master branch
+        run: echo "Running on master push"
